@@ -275,6 +275,14 @@ require('bugpack').context("*", function(bugpack) {
             return this.client.hvals.apply(this.client, arguments);
         },
 
+        /**
+         * @param {string} key
+         * @param {function(number)} callback
+         */
+        incr: function(key, callback) {
+            return this.client.incr.apply(this.client, arguments);
+        },
+
         lPush: function() {
             return this.client.lpush.apply(this.client, arguments);
         },
